@@ -1,0 +1,89 @@
+:root {
+
+  --ev-c-white: #cdd6f4;
+  --ev-c-white-soft: #dce0f7;
+  --ev-c-white-mute: #bac2de;
+
+  --ev-c-black-base: #1e1e2e;
+  --ev-c-black-mantle: #181825;  --ev-c-black-base: #1f1d2e;
+  --ev-c-black-mantle: #191724;
+  --ev-c-black-crust: #11111b;
+
+  --ev-c-surface-0: #313244;
+
+  --ev-c-overlay-0: #6c7086;
+
+  --ev-c-green-1: #a6e3a1;
+
+  --ev-c-gray-1: #727a9d;
+  --ev-c-gray-2: #5b6078;
+  --ev-c-gray-3: #3f3d56;
+
+  --ev-c-text-1: #cdd6f4;
+  --ev-c-text-2: rgba(202, 211, 245, 0.72);
+  --ev-c-text-3: rgba(202, 211, 245, 0.40);
+
+  --ev-c-subtext-0: #a6adc8;
+
+  --ev-button-alt-border: transparent;
+  --ev-button-alt-text: var(--ev-c-text-1);
+  --ev-button-alt-bg: var(--ev-c-gray-3);
+  --ev-button-alt-hover-border: transparent;
+  --ev-button-alt-hover-text: var(--ev-c-text-1);
+  --ev-button-alt-hover-bg: var(--ev-c-gray-2);
+}
+
+:root {
+  --color-background-base: var(--ev-c-black-base);
+  --color-background-mantle: var(--ev-c-black-mantle);
+  --color-background-crust: var(--ev-c-black-crust);
+
+  --color-surface-0: var(--ev-c-surface-0);
+
+  --color-overlay-0: var(--ev-c-overlay-0);
+
+  --color-background-green: var(--ev-c-green-1);
+
+  --color-text: var(--ev-c-text-1);
+
+  --color-subtext-0: var(--ev-c-subtext-0);
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background-base);
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
