@@ -6,10 +6,11 @@ import icon from '../../resources/icon.png?asset'
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 600,
+    title: 'OSRS Tracker',
+    width: 550,
     height: 800,
-    minWidth: 600,
-    minHeight: 800,
+    minWidth: 550,
+    minHeight: 500,
     show: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),
@@ -50,9 +51,6 @@ app.whenReady().then(() => {
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
   })
-
-  // IPC test
-  ipcMain.on('ping', () => console.log('pong'))
 
   // api fetch OSRS hiscore data
   ipcMain.handle('fetch-hiscores', async (_, username) => {
