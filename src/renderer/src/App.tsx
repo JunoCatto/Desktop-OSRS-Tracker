@@ -1,5 +1,5 @@
-import { useState } from 'react' // removed unused useEffect
-import { HiscoreData } from './types'
+import { useState } from 'react'
+import type { HiscoreData } from './types'
 import ProfilePage from './components/ProfilePage'
 
 function App(): React.JSX.Element {
@@ -38,20 +38,29 @@ function App(): React.JSX.Element {
 
   return (
     <div className="landing">
-      <h1>OSRS Tracker</h1>
-      <input
-        spellCheck={false}
-        type="text"
-        placeholder="Enter username"
-        value={username}
-        autoFocus
-        onChange={(e) => setUsername(e.target.value)}
-        onKeyDown={(e) => e.key === 'Enter' && !loading && handleSubmit()}
-      />
-      <button onClick={handleSubmit} disabled={loading}>
-        {loading ? 'Loading...' : 'View Stats'}
-      </button>
-      {error && <p>{error}</p>}
+      <div className="landing-panel">
+        <div className="landing-copy-wrapper">
+          <h1>OSRS Goal Tracker</h1>
+          <p className="landing-copy">
+            Track your item goals, skill targets, and in-game notes for OSRS.
+          </p>
+        </div>
+        <div className="landing-form">
+          <input
+            spellCheck={false}
+            type="text"
+            placeholder="Enter username"
+            value={username}
+            autoFocus
+            onChange={(e) => setUsername(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && !loading && handleSubmit()}
+          />
+          <button onClick={handleSubmit} disabled={loading}>
+            {loading ? 'Loading...' : 'Open tracker'}
+          </button>
+          {error && <p className="landing-error">{error}</p>}
+        </div>
+      </div>
     </div>
   )
 }

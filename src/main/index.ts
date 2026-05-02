@@ -6,7 +6,7 @@ import icon from '../../resources/icon.png?asset'
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    title: 'OSRS Tracker',
+    title: 'OSRS Goal Tracker',
     width: 550,
     height: 800,
     minWidth: 550,

@@ -12,7 +12,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: osrs-desktop-tracker
+  executableName: osrs-task-tracker
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
